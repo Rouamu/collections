@@ -1,17 +1,22 @@
 import random
-from secrets import choice
 
 
 kleuren = ['oranje','rood','geel','bruin']
 
 def mms(aantal):
-    zak = []
+    zak = {
+        'oranje':0,
+        'rood':0,
+        'geel':0,
+        'bruin':0
+    }
     for i in range(aantal): 
-        zak.append(choice(kleuren))
+        kleur = random.choice(kleuren)
+        zak[kleur] +=1
     return zak
 aantal= int(input('hoeveel mms wil je hebben?'))
 x = mms(aantal)
-print(x)
+print(mms(aantal))
 
 
 
